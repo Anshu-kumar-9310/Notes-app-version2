@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+}
+body{
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+}
+/* ==========================================Basic UI css Start =============================================== */
+h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 20px 50px;
+    display: flex;
+    align-items: center;
+    
+}
+h2 img{
+    height: 40px;
+    width: 40px   
+}
+.wrapper{
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+   gap: 15px;
+   
+}
+.wrapper .add-new{
+    background-color: white;
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #95c0ff;
+    font-weight: 500;
+    font-size: 20px;   
+    border-radius: 5px;
+   
+}  
+.add-new span{
+    font-size: 40px;
+    display: block;
+    width:60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px dashed #95c0ff;
+}
+.wrapper .singleNotes{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: black;
+    position: relative;
+    
+}
+.singleNotes .title{
+    font-size: 18px;
+    font-weight: 600;
+    word-wrap: break-word;
+    display: block;
+    height: 25px;
+    overflow-x: auto;
+    border-bottom: 1px solid gray;
+}
+.singleNotes .desc{
+    font-size: 16px;
+    display: block;
+    height: 200px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding-top: 5px;
+    
+}
+/* For hide the default Scrollbar */
+.singleNotes .title::-webkit-scrollbar,.singleNotes .desc::-webkit-scrollbar{
+    display: none;
+}
+.singleNotes .footcontent{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-top: 1px solid rgb(109, 108, 108);
+    font-size: 14px;
+}
+.footcontent .dot{
+   font-weight: 900;
+   cursor: pointer;
+}
+
+.footcontent .setting{
+    list-style: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 70px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: rgba(100, 100, 111, 0.4) 0 7px 29px 0px;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+    
+}
+
+/* ===When Dot Clicked And Setting Box Show ====*/
+.footcontent.show .setting{
+    transform: scale(1);
+}
+/* ===When Dot Clicked And Setting Box Show ====*/
+
+.setting li{
+    padding: 5px 10px;
+    color:black;
+    cursor: pointer;
+}
+.setting li:hover{
+    background-color: rgba(128, 128, 128, 0.237);
+}
+
+.setting li img{
+    width: 20px;
+    margin-right: 10px;
+}
+/* ============================================== Basic UI css End ===================================== */
+
+/* ==============================================add new notes css start =======================================*/
+.form-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    place-items: center;
+    z-index: 3;
+    
+}
+.form-container .form{
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    
+}
+.form .head{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+.head .cross{
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+   
+}
+
+.form .body{
+    margin: 15px 0;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+.body label{
+    font-size: 20px;
+}
+.body input, .body .longtext{
+    height: 35px;
+    margin: 5px 0;
+    font-size: 18px;
+    padding-left: 15px;
+    font-weight: 600;
+    outline: none;
+    
+}
+
+.body .longtext{
+    height: 200px;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    resize: none;
+}
+.form button{
+    width: 360px;
+    height: 40px;
+    color: white;
+    background-color: #6a93f8;
+    border: none;
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.4) 0 7px 29px 0px;
+    cursor: pointer;
+}
+
+/* ==========================================================add new notes css End ================================================*/

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Notes App</title>
+   
+   
+</head>
+<body>
+     <!-- basic UI html Start -->
+    <h2><img src="notes.png">Notes</h2>
+    <div class="wrapper">
+        <div class="add-new">
+            <span>+</span>
+            <p>Add new note</p>
+        </div>
+        
+        <!-- <div class="singleNotes">
+            <p class="title">Design ideas</p>
+            <p class="desc" contenteditable="true">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt suscipit, it quo distinctio officia deserunt minus reiciendis vero consequuntur.
+            </p>
+            <div class="footcontent">
+                <span class="date">April 3,2023</span>
+                <span class="dot" onclick='showMenu(this)'>. . .</span>
+                <div class="setting">
+                    <li><img src="edit.png" >Edit</li>
+                    <hr>
+                    <li><img src="delete.png" onclick='deleteNote()'>Delete</li>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+     <!-- basic UI html End -->
+
+    <!-- add new notes html start -->
+    <div class="form-container">
+        <div class="form">
+            <div class="head">
+                <h4 id="formTitle">Add a new Note</h4>
+                <span class="cross">x</span>
+            </div>
+            <div class="body">
+                <label >Title</label>
+                <input type="text" class="titletext">
+    
+                <label >Description</label>
+                <textarea class="longtext"></textarea>
+            </div>
+            <button id="submitbtn">Add Note</button>
+           </div>
+    </div>
+     <!-- add new notes html end -->
+
+    <script src="script.js"></script>
+</body>
+</html>
